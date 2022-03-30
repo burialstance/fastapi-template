@@ -3,11 +3,6 @@ from starlette.responses import JSONResponse
 
 
 class APIException(Exception):
-    """
-    Инстанциирование объекта исключения приводит к формированию
-    респонса с кодом status_code, кодом error_code,
-    и сообщениями message и detail(опционально).
-    """
     def __init__(self,
                  error_code: int = 000,
                  status_code: int = 500,
